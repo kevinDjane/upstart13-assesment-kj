@@ -1,0 +1,13 @@
+{
+	"name": "linkedserviceDataBricks",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDatabricks",
+		"typeProperties": {
+			"domain": "https://adb-7405614183665269.9.azuredatabricks.net",
+			"authentication": "MSI",
+			"workspaceResourceId": "/subscriptions/de3d65eb-82fc-4906-85bf-7462bff3670a/resourceGroups/kj-ADF-upstart13/providers/Microsoft.Databricks/workspaces/databricks-adf-kj",
+			"existingClusterId": "0318-183959-4n5j6e8p"
+		}
+	}
+}
