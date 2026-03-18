@@ -1,0 +1,22 @@
+{
+	"name": "raw_order_header",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linkedserviceDLcsv",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "order_headers",
+				"folderPath": "raw",
+				"fileSystem": "destination"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

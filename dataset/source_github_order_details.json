@@ -1,0 +1,23 @@
+{
+	"name": "source_github_order_details",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linkedservicegithub",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "kevinDjane/upstart13-assesment-kj/refs/heads/main/inputs_csv/sales_order_detail.csv"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,9 @@
+{
+	"name": "kj-upstart13-adf",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "8a7267c4-223f-44da-b00a-adc1d3f83247",
+		"tenantId": "407d3906-25a4-4aa9-88de-674996b313c3"
+	}
+}

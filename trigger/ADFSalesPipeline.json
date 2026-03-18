@@ -1,0 +1,25 @@
+{
+	"name": "ADFSalesPipeline",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pipeline-ingestion",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 15,
+				"startTime": "2026-03-18T17:40:00",
+				"endTime": "2026-03-20T17:40:00",
+				"timeZone": "Paraguay Standard Time"
+			}
+		}
+	}
+}
