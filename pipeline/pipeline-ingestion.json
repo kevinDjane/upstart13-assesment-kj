@@ -166,6 +166,45 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "Store_Transformation",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "ingestion_products",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					},
+					{
+						"activity": "ingestion_order_detail",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					},
+					{
+						"activity": "ingestion_order_header",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/d3b3ae61-a9d0-4a7a-a9e1-87226a4f28dd/transformations/Store_Tables"
+				},
+				"linkedServiceName": {
+					"referenceName": "linkedserviceDataBricks",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"annotations": [],
