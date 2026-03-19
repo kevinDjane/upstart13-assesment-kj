@@ -205,6 +205,60 @@
 					"referenceName": "linkedserviceDataBricks",
 					"type": "LinkedServiceReference"
 				}
+			},
+			{
+				"name": "Publish_Products",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "Store_Transformation",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/d3b3ae61-a9d0-4a7a-a9e1-87226a4f28dd/transformations/Publish_Products"
+				},
+				"linkedServiceName": {
+					"referenceName": "linkedserviceDataBricks",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "Publish_orders",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "Store_Transformation",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/d3b3ae61-a9d0-4a7a-a9e1-87226a4f28dd/transformations/Publish_Orders"
+				},
+				"linkedServiceName": {
+					"referenceName": "linkedserviceDataBricks",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"annotations": [],
