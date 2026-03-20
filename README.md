@@ -33,20 +33,20 @@ The ADF pipeline runs in the following order:
 
 ### Raw
 
-[raw_order_details.csv](https://github.com/kevinDjane/upstart13-assesment-kj/blob/cb71aa714f0f24dc5f20401dcb3fa11cbb0984b9/output_datasets/raw_order_details.csv)
-[raw_order_headers.csv](https://github.com/kevinDjane/upstart13-assesment-kj/blob/cb71aa714f0f24dc5f20401dcb3fa11cbb0984b9/output_datasets/raw_order_headers.csv)
-[raw_products.csv](https://github.com/kevinDjane/upstart13-assesment-kj/blob/cb71aa714f0f24dc5f20401dcb3fa11cbb0984b9/output_datasets/raw_products.csv)
+- [raw_order_details.csv](https://github.com/kevinDjane/upstart13-assesment-kj/blob/cb71aa714f0f24dc5f20401dcb3fa11cbb0984b9/output_datasets/raw_order_details.csv)
+- [raw_order_headers.csv](https://github.com/kevinDjane/upstart13-assesment-kj/blob/cb71aa714f0f24dc5f20401dcb3fa11cbb0984b9/output_datasets/raw_order_headers.csv)
+- [raw_products.csv](https://github.com/kevinDjane/upstart13-assesment-kj/blob/cb71aa714f0f24dc5f20401dcb3fa11cbb0984b9/output_datasets/raw_products.csv)
 
 ### Store
 
-[store_order_details.parquet](https://github.com/kevinDjane/upstart13-assesment-kj/blob/cb71aa714f0f24dc5f20401dcb3fa11cbb0984b9/output_datasets/store_order_details.parquet)
-[store_order_headers.parquet](https://github.com/kevinDjane/upstart13-assesment-kj/blob/cb71aa714f0f24dc5f20401dcb3fa11cbb0984b9/output_datasets/store_order_headers.parquet)
-[store_products.parquet](https://github.com/kevinDjane/upstart13-assesment-kj/blob/cb71aa714f0f24dc5f20401dcb3fa11cbb0984b9/output_datasets/store_products.parquet)
+- [store_order_details.parquet](https://github.com/kevinDjane/upstart13-assesment-kj/blob/cb71aa714f0f24dc5f20401dcb3fa11cbb0984b9/output_datasets/store_order_details.parquet)
+- [store_order_headers.parquet](https://github.com/kevinDjane/upstart13-assesment-kj/blob/cb71aa714f0f24dc5f20401dcb3fa11cbb0984b9/output_datasets/store_order_headers.parquet)
+- [store_products.parquet](https://github.com/kevinDjane/upstart13-assesment-kj/blob/cb71aa714f0f24dc5f20401dcb3fa11cbb0984b9/output_datasets/store_products.parquet)
 
 ### Publish
 
-[publish_orders.parquet](https://github.com/kevinDjane/upstart13-assesment-kj/blob/cb71aa714f0f24dc5f20401dcb3fa11cbb0984b9/output_datasets/publish_orders.parquet)
-[publish_products.parquet](https://github.com/kevinDjane/upstart13-assesment-kj/blob/cb71aa714f0f24dc5f20401dcb3fa11cbb0984b9/output_datasets/publish_products.parquet)
+- [publish_orders.parquet](https://github.com/kevinDjane/upstart13-assesment-kj/blob/cb71aa714f0f24dc5f20401dcb3fa11cbb0984b9/output_datasets/publish_orders.parquet)
+- [publish_products.parquet](https://github.com/kevinDjane/upstart13-assesment-kj/blob/cb71aa714f0f24dc5f20401dcb3fa11cbb0984b9/output_datasets/publish_products.parquet)
 
 ---
 
