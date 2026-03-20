@@ -14,6 +14,8 @@ End-to-end data pipeline built with **Azure Data Factory** and **Databricks** th
 | Transformation | Databricks (PySpark / Spark SQL) |
 | Version Control | GitHub |
 
+<img width="1270" height="702" alt="diagramtest" src="https://github.com/user-attachments/assets/b6877aff-de0b-48d5-9b00-3d5cb1709bf1" />
+
 ---
 
 ## Pipeline
@@ -23,6 +25,28 @@ The ADF pipeline runs in the following order:
 1. **Ingestion** (parallel) — `ingestion_products`, `ingestion_order_detail`, `ingestion_order_header`
 2. **Transformation** — `Store_Transformation` notebook that enriches the raw data
 3. **Publishing** (parallel) — `Publish_Products` and `Publish_Orders` notebooks expose the final tables
+
+<img width="1530" height="718" alt="pipeline" src="https://github.com/user-attachments/assets/5a7af1bd-e7a8-457a-8cc8-b8d4f01b2966" />
+
+---
+## Datasets
+
+### Raw
+
+[raw_order_details.csv](https://github.com/kevinDjane/upstart13-assesment-kj/blob/cb71aa714f0f24dc5f20401dcb3fa11cbb0984b9/output_datasets/raw_order_details.csv)
+[raw_order_headers.csv](https://github.com/kevinDjane/upstart13-assesment-kj/blob/cb71aa714f0f24dc5f20401dcb3fa11cbb0984b9/output_datasets/raw_order_headers.csv)
+[raw_products.csv](https://github.com/kevinDjane/upstart13-assesment-kj/blob/cb71aa714f0f24dc5f20401dcb3fa11cbb0984b9/output_datasets/raw_products.csv)
+
+### Store
+
+[store_order_details.parquet](https://github.com/kevinDjane/upstart13-assesment-kj/blob/cb71aa714f0f24dc5f20401dcb3fa11cbb0984b9/output_datasets/store_order_details.parquet)
+[store_order_headers.parquet](https://github.com/kevinDjane/upstart13-assesment-kj/blob/cb71aa714f0f24dc5f20401dcb3fa11cbb0984b9/output_datasets/store_order_headers.parquet)
+[store_products.parquet](https://github.com/kevinDjane/upstart13-assesment-kj/blob/cb71aa714f0f24dc5f20401dcb3fa11cbb0984b9/output_datasets/store_products.parquet)
+
+### Publish
+
+[publish_orders.parquet](https://github.com/kevinDjane/upstart13-assesment-kj/blob/cb71aa714f0f24dc5f20401dcb3fa11cbb0984b9/output_datasets/publish_orders.parquet)
+[publish_products.parquet](https://github.com/kevinDjane/upstart13-assesment-kj/blob/cb71aa714f0f24dc5f20401dcb3fa11cbb0984b9/output_datasets/publish_products.parquet)
 
 ---
 
@@ -55,7 +79,7 @@ ORDER BY order_year DESC
 **Results:**
 | Year | Top Color | Total net revenue |
 |------|-----------|-------------------|
-| 2024 | Black | 1190442.12 |
+| 2024 | Black | 1190442.120 |
 | 2023 | Black | 1828919.457 |
 | 2022 | Red | 950245.163 |
 | 2021 | Red | 950245.163 |
