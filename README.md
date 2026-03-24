@@ -23,10 +23,10 @@ End-to-end data pipeline built with **Azure Data Factory** and **Databricks** th
 The ADF pipeline runs in the following order:
 
 1. **Ingestion** (parallel) — `ingestion_products`, `ingestion_order_detail`, `ingestion_order_header`
-2. **Transformation** — `Store_Transformation` notebook that enriches the raw data
+2. **Transformation** — `Store_Products`, `Store_OrderDetail` and `Store_OrderHeader` notebooks that enriches the raw data
 3. **Publishing** (parallel) — `Publish_Products` and `Publish_Orders` notebooks expose the final tables
 
-<img width="1530" height="718" alt="pipeline" src="https://github.com/user-attachments/assets/5a7af1bd-e7a8-457a-8cc8-b8d4f01b2966" />
+<img width="1200" height="693" alt="pipeline_medallion" src="https://github.com/user-attachments/assets/ab21a122-b31f-4d44-842c-949fdc39dcfb" />
 
 ---
 ## Datasets
