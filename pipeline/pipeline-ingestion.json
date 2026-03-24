@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "ingestion_products",
+				"name": "Ingestion_Products",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -58,7 +58,7 @@
 				]
 			},
 			{
-				"name": "ingestion_order_detail",
+				"name": "ingestion_OrderDetail",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -113,7 +113,7 @@
 				]
 			},
 			{
-				"name": "ingestion_order_header",
+				"name": "ingestion_OrderHeader",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -168,50 +168,11 @@
 				]
 			},
 			{
-				"name": "Store_Transformation",
-				"type": "DatabricksNotebook",
-				"dependsOn": [
-					{
-						"activity": "ingestion_products",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					},
-					{
-						"activity": "ingestion_order_detail",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					},
-					{
-						"activity": "ingestion_order_header",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"notebookPath": "/Users/d3b3ae61-a9d0-4a7a-a9e1-87226a4f28dd/transformations/Store_Tables"
-				},
-				"linkedServiceName": {
-					"referenceName": "linkedserviceDataBricks",
-					"type": "LinkedServiceReference"
-				}
-			},
-			{
 				"name": "Publish_Products",
 				"type": "DatabricksNotebook",
 				"dependsOn": [
 					{
-						"activity": "Store_Transformation",
+						"activity": "Store_Produtcs",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -238,7 +199,13 @@
 				"type": "DatabricksNotebook",
 				"dependsOn": [
 					{
-						"activity": "Store_Transformation",
+						"activity": "Store_OrderDetail",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					},
+					{
+						"activity": "Store_OrderHeader",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -254,6 +221,87 @@
 				"userProperties": [],
 				"typeProperties": {
 					"notebookPath": "/Users/d3b3ae61-a9d0-4a7a-a9e1-87226a4f28dd/transformations/Publish_Orders"
+				},
+				"linkedServiceName": {
+					"referenceName": "linkedserviceDataBricks",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "Store_Produtcs",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "Ingestion_Products",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/d3b3ae61-a9d0-4a7a-a9e1-87226a4f28dd/transformations/Store_Products"
+				},
+				"linkedServiceName": {
+					"referenceName": "linkedserviceDataBricks",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "Store_OrderDetail",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "ingestion_OrderDetail",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/d3b3ae61-a9d0-4a7a-a9e1-87226a4f28dd/transformations/Store_OrderDetails"
+				},
+				"linkedServiceName": {
+					"referenceName": "linkedserviceDataBricks",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "Store_OrderHeader",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "ingestion_OrderHeader",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/d3b3ae61-a9d0-4a7a-a9e1-87226a4f28dd/transformations/Store_OrderHeader"
 				},
 				"linkedServiceName": {
 					"referenceName": "linkedserviceDataBricks",
